@@ -26,10 +26,7 @@ public class InvoiceErrorHandler {
 	public ResponseEntity<ErrorType> handleNotFound(InvoiceNotFoundException nfe){
 		
 		return new ResponseEntity<ErrorType>(
-				new ErrorType(
-						new Date(System.currentTimeMillis()).toString(), 
-						"404- NOT FOUND", 
-						nfe.getMessage()), 
+				new ErrorType(), 
 				HttpStatus.NOT_FOUND);
 	}
 }
